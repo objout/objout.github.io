@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="player/APlayer.min.css">
+</head>
+<body>
+<div class="container">
+<div style="text-align:center;clear:both;">
+
+</div>
+  <div id="player1" class="aplayer"></div>
+</div>
+<script src="player/APlayer.min.js"></script> 
+<script>
+    var ap1 = new APlayer({
+        element: document.getElementById('player1'),
+        narrow: false,
+        autoplay: false,
+        showlrc: false,
+        music: {
+            title: '我们的时光',
+            author: '赵雷',
+            url: 'player/music/1.mp3',
+            pic: 'player/music/1.jpg'
+        }
+    });
+    ap1.init(); 
+</script>
+</body>
+</html>
