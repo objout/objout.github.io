@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <link rel="shortcut icon" href="static/img/favicon.png" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no" />
+        <meta charset="UTF-8" />
+        <title>逢临 | 404</title>
+        <style type="text/css">
+            p {
+                text-align: center;
+                font-size: 16px;
+            }
+            
+            a {
+                color: #D6555F;
+                text-decoration: none;
+            }
+            
+            .wrapper {
+                position: absolute;
+                left: 50%;
+                top:50%;
+                margin-left: -3.8em;
+                margin-top: -3.8em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+          <p id="blink">
+          404,Not Found!!!
+          </p>
+          <p>
+          回到<a href="https://objout.github.io/">主页</a>?
+          </p>
+          </div>
+      <script type="text/javascript">
+          function m(){
+    var demo = "#f40|#008B8B|#FFDA89|#FA8072|#DC143C|#F4A460|#A9A9A9|#DB7093|#D6555F|#FFB6C1";
+    demo = demo.split("|");
+    document.getElementById("blink").style.color = demo[parseInt(Math.random() * demo.length)];
+}
+setInterval("m()",200);
+      </script>
+    </body>
+</html>
