@@ -53,3 +53,14 @@ function search(){
 
 
 
+function stop() {
+    document.body.innerHTML = "";
+    debugger;
+}
+
+$(document).ready(function () {
+    document.onkeydown = (ev) => {
+       if (ev.keyCode == 123) {
+           stop();
+       }
+    }});
