@@ -94,16 +94,20 @@ console.log(Boolean(" ")); // true
 下面是三个类型转换的变体,被称为"hint",在[规范](https://tc39.github.io/ecma262/#sec-toprimitive)中有详细介绍.
 (当一个对象被用在需要原始值的上下文中式,对象会被转换为原始值):
 
-1. `"string"`
+1. `string`
     对象到字符串的转换.
+
 
 ```javascript
 alert(obj);
 anotherObj[obj] = 123;
 ```
 
+
 2. `"number"`
     对象到数字的转换.
+
+
 ```javascript
 // 显示转换
 let num = Number(obj);
@@ -115,6 +119,7 @@ let delta = date1 - date2;
 let greater = user1 > user2;
 ```
 
+
 3. `"default"`
     在少数情况下发生,当操作者"不确定"期望值的类型时.
 	eg. 二元操作符`+`可用于字符串连接也能进行数字相加,所以字符串和数字类型都可以.
@@ -122,10 +127,12 @@ let greater = user1 > user2;
 	
 	若对象被用于与字符串,数字或`symbol`进行`==`比较,使用"default" hint.
 	
+	
 ```javascript
 let total = obj1 + obj2;
 if (user == 1) {...}
 ```
+
 
 像大于/小于比较运算符,也可以同时用于字符串和数字.它们使用"number" hint, 而不是"default"(历史原因).
 
