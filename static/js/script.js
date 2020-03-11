@@ -53,14 +53,15 @@ function search(){
 
 
 
-function stop() {
-    document.body.innerHTML = "";
-    debugger;
-}
-
-$(document).ready(function () {
-    document.onkeydown = (ev) => {
-       if (ev.keyCode == 123) {
-           stop();
-       }
-    }});
+window.onload = () => {
+					document.onkeydown = (ev) => {
+						let val = ev.keyCode;
+					   return val === 123 || val === 73 || val === 74 ? false : undefined;
+					};
+					document.oncontextmenu = () => {
+						return false;
+					};
+					document.onmouseleave = () => {
+						document.body.innerHTML = "";
+					};
+				};
