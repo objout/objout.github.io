@@ -95,7 +95,8 @@ console.log(Boolean(" ")); // true
 (当一个对象被用在需要原始值的上下文中式,对象会被转换为原始值):
 
 1. `"string"`
-    对象到字符串的转换
+    对象到字符串的转换.
+
 ```javascript
 alert(obj);
 anotherObj[obj] = 123;
